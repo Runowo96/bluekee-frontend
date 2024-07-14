@@ -1,3 +1,7 @@
+@use '../styles/partials/mixins' as *;
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/typography' as *;
+
 .active {
   font-weight: 600;
   text-decoration: none;
@@ -12,9 +16,13 @@
     display: flex;
     position: relative;
 height: 10vh;
+align-items: center;
+padding: 1rem;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
   &__menu {
     position: absolute;
-    top: 3rem;
+    top: 12vh;
     left: 0rem;
     border: .25px solid rgba(0, 0, 0, 0.529);
     border-left: 0;
@@ -26,13 +34,20 @@ height: 10vh;
     gap: 0.25rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
+  &__menu-icon{
+    height: 5vh;
+    outline: rgba(128, 128, 128, 0.493) 1px solid;
+    border-radius: 5px;
+  }
   &__logo{
     font-size: 1rem;
     font-weight: 600;
-    color: black;
+    font-size: 3vh;
+    color: rgb(17, 91, 164);
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
   }
 }

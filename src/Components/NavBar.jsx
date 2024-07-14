@@ -14,12 +14,13 @@ function NavBar() {
   return (
     <div>
       <nav className="nav">
-        <article>
-          <img onClick={!isOpen?openMenu:closeMenu} src={menuIcon} alt="menu icon" />
-        </article>
+
+          <img className="nav__menu-icon" onClick={!isOpen?openMenu:closeMenu} src={menuIcon} alt="menu icon" />
+
         {isOpen && (
           <article className="nav__menu">
             <NavLink
+            onClick={closeMenu}
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : "inactive"
               }
@@ -28,6 +29,7 @@ function NavBar() {
               Home
             </NavLink>
             <NavLink
+             onClick={closeMenu}
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : "inactive"
               }
@@ -39,7 +41,7 @@ function NavBar() {
         )}
         <article className="nav__logo">
           <p>
-            BLUE KEE DESIGN CO.
+            BLUE KEE <br/> DESIGN CO.
           </p>
         </article>
       </nav>
