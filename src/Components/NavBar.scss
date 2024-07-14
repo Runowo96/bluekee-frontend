@@ -1,6 +1,6 @@
-@use '../styles/partials/mixins' as *;
-@use '../styles/partials/variables' as *;
-@use '../styles/partials/typography' as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/typography" as *;
 
 .active {
   font-weight: 600;
@@ -13,21 +13,27 @@
 }
 
 .nav {
-    display: flex;
-    position: relative;
-height: 10vh;
-align-items: center;
-padding: $padding-mobile-sides;
-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-@include tablet{
-    padding: $padding-tablet-sides;
-}
+  display: flex;
+  position: relative;
+  height: 10vh;
+  align-items: center;
+  padding-left: $padding-mobile-sides;
+  padding-right: $padding-mobile-sides;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  @include tablet {
+    padding-left: $padding-tablet-sides;
+    padding-right: $padding-tablet-sides;
+  }
+  @include desktop {
+    padding-left: $padding-desktop-sides;
+    padding-right: $padding-desktop-sides;
+  }
 
   &__menu {
     position: absolute;
     top: 12vh;
     left: 0rem;
-    border: .25px solid rgba(0, 0, 0, 0.529);
+    border: 0.25px solid rgba(0, 0, 0, 0.529);
     border-left: 0;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
@@ -36,19 +42,21 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     flex-direction: column;
     gap: 0.5rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    font-size: 1.5rem;
-    @include tablet{
-        font-size: 3rem;
-
+    font-size: 3.5vh;
+    @include desktop {
+      display: none;
     }
   }
-  &__menu-icon{
+  &__menu-icon {
     height: 6vh;
     outline: rgba(128, 128, 128, 0.493) 1px solid;
     border-radius: 5px;
+    @include desktop {
+      display: none;
+    }
   }
-  &__logo{
-    font-size: 1rem;
+
+  &__logo {
     font-weight: 600;
     font-size: 3vh;
     color: rgb(17, 91, 164);
@@ -57,5 +65,14 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+  }
+  &__menu-desktop{
+    display: none;
+    @include desktop {
+      display: flex;
+      gap: 2rem;
+      font-size: 3.5vh;
+
+    }
   }
 }
