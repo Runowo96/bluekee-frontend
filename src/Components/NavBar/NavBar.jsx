@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./NavBar.scss";
-import menuIcon from "../assets/icons/menu-icon.svg";
+import menuIcon from "../../assets/icons/menu-icon.svg";
 import { NavLink } from "react-router-dom";
 
 function NavBar() {
