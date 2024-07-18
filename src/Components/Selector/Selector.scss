@@ -1,0 +1,16 @@
+.sel-btn{
+    border: none;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: .625rem;
+    line-height: 1rem;
+    padding-top: .2rem;
+    &__selected{
+        color: white;
+        background-color: black;
+        border: 1px solid black;
+        border-radius: .625rem;
+        line-height: 1rem;
+        padding-top: .2rem;
+    }
+}
