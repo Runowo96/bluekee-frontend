@@ -37,6 +37,15 @@ function NavBar() {
             >
               About
             </NavLink>
+            <NavLink
+             onClick={closeMenu}
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : "inactive"
+              }
+              to="/contact"
+            >
+              Contact
+            </NavLink>
           </article>
         )}
         <article className="nav__menu-desktop">
@@ -58,10 +67,19 @@ function NavBar() {
             >
               About
             </NavLink>
+            <NavLink
+             onClick={closeMenu}
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : "inactive"
+              }
+              to="/contact"
+            >
+              Contact
+            </NavLink>
         </article>
         <article className="nav__logo">
           <p>
-            BLUE KEE <br/> DESIGN CO.
+            BLUE KEE DESIGN CO.
           </p>
         </article>
       </nav>

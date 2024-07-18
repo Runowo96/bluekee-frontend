@@ -43,6 +43,7 @@
     gap: 0.5rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     font-size: 3.5vh;
+    background-color: white;
     @include desktop {
       display: none;
     }
@@ -65,6 +66,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width: 8rem;
+    @include tablet {
+      width: fit-content;
+      font-size: 3.5vh;
+    }
+    @include desktop {
+font-size: 4vh;    }
   }
   &__menu-desktop{
     display: none;
