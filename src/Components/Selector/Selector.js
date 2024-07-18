@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Selector.scss";
 
-function Selector({setSelected}) {
+function Selector({selected,setSelected}) {
   // const [catagories, setCatagories] = useState([]);
   const data = {
     category: [
@@ -21,11 +21,15 @@ function Selector({setSelected}) {
     setNumber(number + 1);
     return number;
   }
+
   return (
     <div>
       {data.category.map((cata) => {
+        const isSelected = selected === cata;
+      
+        
         console.log(cata)
-        return <button key={increment} onClick={() => setSelected(cata)}>{cata}</button>;
+        return <button className={!isSelected ? "sel-btn" : "sel-btn__selected" } key={increment} onClick={() => setSelected(cata)}>{cata}</button>;
       })}
     </div>
   );

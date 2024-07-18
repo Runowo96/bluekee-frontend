@@ -6,7 +6,7 @@ function Gallery() {
   const [selected, setSelected] = useState('All')
   return (
     <div>
-      <Selector setSelected={setSelected} />
+      <Selector selected={selected} setSelected={setSelected} />
 <p>{selected}</p>
 
     </div>
